@@ -1,0 +1,41 @@
+h2. ATokens API
+
+This project provides a PHP wrapper to the ATokens OAuth API. The API allows you (the Consumer) to perform a number of operations, including credit transfers, on behalf of an ATokens user in a secure fashion.
+
+It is recommended that developers intending to use the API have a passing familiarity with OAuth ( http://oauth.net/ ), although it is not necessary in order to use the wrapper.
+
+h3. Definitions
+
+The API generally follows the OAuth terminology, the following terms will be useful in understanding this document:
+
+*   Service Provider
+
+    In this case, the Service Provider is ATokens.
+    
+*   Consumer
+
+    The Consumer is the web service accessing the Service Provider on behalf of the User. In this case, the Consumer is probably you.
+    
+*   User
+
+    The User is the account on whose behalf the Consumer is operating.
+
+h3. Installation
+
+Simply include AtokensOAuth.php and OAuth.php in your project. You may optionally want to include the examples such as cointoss.php for reference. The Curl PHP extension is required, and the json_decode function must be available (PHP 5.2 onwards natively).
+
+h3. Quick start
+
+h4. Introduction
+
+ATokens uses an HTTP API with JSON returns, authorized by OAuth 1.0A. The AtokensOAuth.php library provides a wrapper over this, making integration reasonably straightforward without requiring excessive understanding of OAuth.
+
+The API allows the application to act on behalf of a user. This is known as "3-legged auth", in which the User asks the Consumer (application) to access ATokens and perform some action(s).
+
+h4. Accessible methods
+
+For a list of accessible methods, see the class AtokensClient in AtokensOAuth.php and examples in cointoss.php.
+
+h4. Questions
+
+If you have any questions regarding the API at the moment, please contact Richard Clark <richard@redspider.co.nz>
